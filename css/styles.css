@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+html,
+body{
+    height: auto;
+    min-height: 100vh;
+}
+html {
+    background-color: rgb(178, 172, 172);
+    /*background: linear-gradient(2200deg, #480a3e 0%,  #17173d 100%);*/
+}
+input:focus{ /*remover borda do input*/
+    outline: none;
+}
+#register-container{
+    
+    max-width: 1000px;
+    min-height: 80vh;
+    margin: 2rem auto;
+    display: flex;
+    box-shadow: 0 15px 30px rgba(124, 124, 155, 0.4), 
+    0 5px 15px rgba(72, 10, 62, 0.3),
+    0 0 25px rgba(137, 67, 126, 0.2);
+    border-radius: 0 5px 5px 0;
+   
+}
+#register-container,
+#register-baner,
+#banner-layer{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+#register-baner{
+    background: url(../img/layer.png);
+    background-size: cover;
+    background-position: 68% center;
+    width: 70%;
+    
+    
+}
+#banner-layer{
+    background-color: rgba(23, 23, 61, 0.8);
+    height: 100%;
+    
+}   
+
+#register-form{
+    background-color: #fdfdfd;
+    border-radius: 0 5px 5px 0;
+    padding: 2rem;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+#register-form h2{
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    color: blue;
+}
+#register-form p{
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: rgb(75, 50, 13);
+    font-size: 0.8rem;
+}
+.form-control{
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.form-control label{
+    font-weight: bold;
+    margin-bottom: .6rem;
+}
+.form-control input{
+    border: none;
+    border-bottom: 1px solid #808080;
+}
+#generate-password{
+    font-weight: bold;
+    cursor: pointer;
+    transition: .4s;
+}
+#generate-password:hover{
+    color: #2727c5;
+}
+
+
+input[type ="submit"]{
+    font-weight: bold;
+    cursor: pointer;
+    transition: .4s;
+    border-radius: 20px;
+    border-style: none;
+    color: #fff;
+    background-color: #2727c5;
+    height: 60px;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+input[type ="submit"]:hover{
+    color: #0c0c04;
+    opacity: 0.5;
+    
+}
