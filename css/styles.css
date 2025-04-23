@@ -124,8 +124,102 @@ input[type ="submit"]:hover{
     color: #333;
     text-align: center;
     margin-bottom: 1rem;
-    display: none;
+    /*display: none;*/
 }
  #generated-password p{
     color: #1d8a2c;
+}
+
+/* RESPONSIVIDADE */
+
+/* Tablets e dispositivos menores (até 768px) */
+@media screen and (max-width: 768px) {
+    #register-container {
+        flex-direction: column;
+        width: 90%;
+        min-height: auto;
+    }
+    
+    #register-baner {
+        width: 100%;
+        min-height: 200px;
+        border-radius: 5px 5px 0 0;
+    }
+    
+    #register-form {
+        width: 100%;
+        border-radius: 0 0 5px 5px;
+    }
+    
+    #banner-layer {
+        border-radius: 5px 5px 0 0;
+    }
+}
+
+/* Smartphones (até 480px) */
+@media screen and (max-width: 480px) {
+    #register-container {
+        width: 95%;
+        margin: 1rem auto;
+    }
+    
+    #register-baner {
+        min-height: 150px;
+    }
+    
+    #register-form {
+        padding: 1.5rem;
+    }
+    
+    #register-form h2 {
+        font-size: 1rem;
+    }
+    
+    #register-form p {
+        font-size: 0.7rem;
+    }
+    
+    .form-control label {
+        font-size: 0.8rem;
+    }
+    
+    input[type="submit"] {
+        height: 50px;
+        font-size: 0.9rem;
+    }
+    
+    #generated-password {
+        font-size: 1rem;
+    }
+}
+
+/* Telas muito pequenas */
+@media screen and (max-width: 320px) {
+    #register-form {
+        padding: 1rem;
+    }
+    
+    .form-control {
+        margin-bottom: 0.8rem;
+    }
+    
+    input[type="submit"] {
+        height: 40px;
+        font-size: 0.8rem;
+    }
+}
+
+/* Telas grandes (acima de 1200px) */
+@media screen and (min-width: 1200px) {
+    #register-container {
+        max-width: 1200px;
+    }
+}
+
+/* Ajuste para altura em dispositivos pequenos */
+@media screen and (max-height: 700px) {
+    #register-container {
+        min-height: auto;
+        margin: 1rem auto;
+    }
 }
