@@ -114,3 +114,18 @@ input[type ="submit"]:hover{
     opacity: 0.5;
     
 }
+
+#generated-password{
+    border: 1px solid #2727c5;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 0.4rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 1rem;
+    display: none;
+}
+ #generated-password p{
+    color: #1d8a2c;
+}
