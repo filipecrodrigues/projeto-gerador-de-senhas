@@ -124,12 +124,14 @@ input[type ="submit"]:hover{
     color: #333;
     text-align: center;
     margin-bottom: 1rem;
-    /*display: none;*/
+    display: none;
 }
  #generated-password p{
     color: #1d8a2c;
 }
-
+#generated-password h4{
+    font-weight: bold;
+}
 /* RESPONSIVIDADE */
 
 /* Tablets e dispositivos menores (até 768px) */
