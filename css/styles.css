@@ -87,17 +87,19 @@ input:focus{ /*remover borda do input*/
     border: none;
     border-bottom: 1px solid #808080;
 }
-#generate-password{
+#open-generate-password{
     font-weight: bold;
     cursor: pointer;
     transition: .4s;
 }
-#generate-password:hover{
+#open-generate-password:hover{
     color: #2727c5;
 }
 
 
-input[type ="submit"]{
+input[type ="submit"],
+#generate-password,
+#copy-password{
     font-weight: bold;
     cursor: pointer;
     transition: .4s;
@@ -110,11 +112,29 @@ input[type ="submit"]{
     font-size: 1rem;
 }
 input[type ="submit"]:hover{
-    color: #0c0c04;
-    opacity: 0.5;
-    
+    opacity: 0.8;
+    transform: translateY(-1px);
+}
+#generate-password{
+    width: 20%;
+    font-size: .8rem;
+    height: 10%;
 }
 
+#generate-password:hover{
+    opacity: 0.8;
+    transform: translateY(-1px);
+}
+#copy-password{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 30%;
+    height: 30%;
+}
+#copy-password:hover{
+    opacity: 0.8;
+    transform: translateY(-1px);
+}
 #generated-password{
     border: 1px solid #2727c5;
     border-radius: 5px;
@@ -124,7 +144,7 @@ input[type ="submit"]:hover{
     color: #333;
     text-align: center;
     margin-bottom: 1rem;
-    display: none;
+    /*display: none;*/
 }
  #generated-password p{
     color: #1d8a2c;
@@ -132,8 +152,31 @@ input[type ="submit"]:hover{
 #generated-password h4{
     font-weight: bold;
 }
+/*Opções de senha*/
+.generate-options{
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid #0c0c04;
+}
+.generate-options .form-control{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.generate-options label{
+    font-size: .8rem;
+}
+.generate-options input[type =text]{
+    max-width: 7%;
+    text-align: center;
+    border: 1px solid #333;
+}
+.generate-options button{
+    display: block;
+    margin: 0 auto;
+    
+}
 /* RESPONSIVIDADE */
-
 /* Tablets e dispositivos menores (até 768px) */
 @media screen and (max-width: 768px) {
     #register-container {
@@ -155,6 +198,33 @@ input[type ="submit"]:hover{
     
     #banner-layer {
         border-radius: 5px 5px 0 0;
+    }
+    
+    /* Ajustes para os botões */
+    #copy-password,
+    #generate-password {
+        font-size: 0.8rem;
+        width: 40%;
+        margin: 0.5rem auto;
+    }
+    
+    /* Ajustes para as opções de geração de senha */
+    .generate-options {
+        padding: 0.8rem;
+    }
+    
+    .generate-options .form-control {
+        margin-bottom: 0.5rem;
+    }
+    
+    .generate-options input[type=text] {
+        max-width: 12%;
+    }
+    
+    /* Ajuste para o container de senha gerada */
+    #generated-password {
+        font-size: 1rem;
+        padding: 0.3rem;
     }
 }
 
@@ -190,8 +260,38 @@ input[type ="submit"]:hover{
         font-size: 0.9rem;
     }
     
+    /* Ajustes para os botões */
+    #copy-password,
+    #generate-password {
+        font-size: 0.7rem;
+        width: 60%;
+        height: auto;
+        padding: 8px 0;
+    }
+    
+    /* Ajustes para as opções de geração de senha */
+    .generate-options {
+        padding: 0.6rem;
+        margin-bottom: 0.7rem;
+    }
+    
+    .generate-options label {
+        font-size: 0.7rem;
+    }
+    
+    .generate-options .form-control {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.3rem;
+    }
+    
+    .generate-options input[type=text] {
+        max-width: 20%;
+    }
+    
     #generated-password {
-        font-size: 1rem;
+        font-size: 0.9rem;
+        padding: 0.2rem;
     }
 }
 
@@ -209,12 +309,51 @@ input[type ="submit"]:hover{
         height: 40px;
         font-size: 0.8rem;
     }
+    
+    /* Ajustes para os botões */
+    #copy-password,
+    #generate-password {
+        font-size: 0.6rem;
+        width: 70%;
+        height: auto;
+        padding: 6px 0;
+    }
+    
+    /* Ajustes para as opções de geração de senha */
+    .generate-options {
+        padding: 0.5rem;
+    }
+    
+    .generate-options label {
+        font-size: 0.6rem;
+    }
+    
+    .generate-options input[type=text] {
+        max-width: 25%;
+    }
+    
+    #generated-password {
+        font-size: 0.8rem;
+    }
+    
+    #generated-password h4 {
+        font-size: 0.7rem;
+    }
 }
 
 /* Telas grandes (acima de 1200px) */
 @media screen and (min-width: 1200px) {
     #register-container {
         max-width: 1200px;
+    }
+    
+    /* Ajustes para botões em telas grandes */
+    #copy-password {
+        width: 25%;
+    }
+    
+    #generate-password {
+        width: 18%;
     }
 }
 
@@ -223,5 +362,20 @@ input[type ="submit"]:hover{
     #register-container {
         min-height: auto;
         margin: 1rem auto;
+    }
+    
+    /* Reduzir margens e padding em dispositivos com altura reduzida */
+    .form-control {
+        margin-bottom: 0.6rem;
+    }
+    
+    .generate-options {
+        margin-bottom: 0.6rem;
+        padding: 0.6rem;
+    }
+    
+    #copy-password,
+    #generate-password {
+        margin: 0.4rem auto;
     }
 }
