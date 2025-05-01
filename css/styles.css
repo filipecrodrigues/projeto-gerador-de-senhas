@@ -166,7 +166,8 @@ input[type ="submit"]:hover{
 .generate-options label{
     font-size: .8rem;
 }
-.generate-options input[type =text]{
+
+#length{
     max-width: 7%;
     text-align: center;
     border: 1px solid #333;
@@ -217,7 +218,7 @@ input[type ="submit"]:hover{
         margin-bottom: 0.5rem;
     }
     
-    .generate-options input[type=text] {
+    #length {
         max-width: 12%;
     }
     
@@ -285,7 +286,7 @@ input[type ="submit"]:hover{
         gap: 0.3rem;
     }
     
-    .generate-options input[type=text] {
+    .length {
         max-width: 20%;
     }
     
@@ -328,7 +329,7 @@ input[type ="submit"]:hover{
         font-size: 0.6rem;
     }
     
-    .generate-options input[type=text] {
+    .length {
         max-width: 25%;
     }
     
