@@ -163,6 +163,7 @@ input[type ="submit"]:hover{
     justify-content: space-between;
     align-items: center;
 }
+
 .generate-options label{
     font-size: .8rem;
 }
