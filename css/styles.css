@@ -146,6 +146,48 @@ input[type ="submit"]:hover{
     margin-bottom: 1rem;
     display: none;
 }
+/* Estilo para o campo de senha com o botão de toggle */
+.form-control {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.password-field {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.toggle-btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #777;
+    font-size: 18px;
+    z-index: 2;
+}
+
+.toggle-btn:hover {
+    color: #333;
+}
+
+#confirmpassword {
+    padding-right: 35px; /* Espaço para o ícone */
+    width: 100%;
+}
+/* Ajuste para que o texto da senha não fique sob o botão */
+#confirmpassword {
+    padding-right: 40px;
+    width: 100%;
+}
  #generated-password p{
     color: #1d8a2c;
 }

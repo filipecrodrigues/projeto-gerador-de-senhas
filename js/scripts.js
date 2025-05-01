@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    /*seleção de elementos */
+   
     const generatepasswordButton = document.querySelector("#generate-password");
     const generatedpasswordElement = document.querySelector("#generated-password");
 
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Esconde o container de geração de senha inicialmente
     generatePasswordContainer.style.display = "none";
 
-    /*Funções */
+  
     /*gerando letras minusculas */
     const getLetterLowerCase = () => {
         return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 
-    /*Eventos */
+    // Adiciona o evento de clique ao botão de gerar senha
     if (generatepasswordButton) {
         generatepasswordButton.addEventListener("click", generatedpassword);
     }
@@ -135,3 +135,18 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+// Adiciona a funcionalidade de mostrar/esconder a senha no campo de confirmação
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const togglePassword = document.getElementById('togglePassword');
+        const passwordField = document.getElementById('confirmpassword');
+        const eyeIcon = document.getElementById('fa-solid fa-eye');
+        
+        // Adiciona o evento de clique ao botão
+        togglePassword.addEventListener('click', function() {
+            // Alterna o tipo do campo entre 'password' e 'text'
+            const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordField.setAttribute('type', type);
+
+        });
+    });
